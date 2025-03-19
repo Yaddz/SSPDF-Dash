@@ -70,11 +70,11 @@ def processar_todos_arquivos(pasta_dados):
     return df_final
 
 # Caminhos e execução
-pasta_dados = '/workspaces/SSPDF-Dash/Dados'
+pasta_dados = '/workspaces/SSPDF-Dash/Dados/xlsx'
 df_combinado = processar_todos_arquivos(pasta_dados)
 
 if df_combinado is not None:
-    caminho_saida = os.path.join('/workspaces/SSPDF-Dash', 'dados_combinados.csv')
+    caminho_saida = os.path.join('/workspaces/SSPDF-Dash/Dados', 'dados_combinados.csv')
     df_combinado.write_csv(caminho_saida)
     print(f"Dados combinados salvos em: {caminho_saida}")
     print(f"Total de linhas no arquivo combinado: {df_combinado.height}")
